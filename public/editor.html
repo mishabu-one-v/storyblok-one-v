@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Storyblok Admin (local)</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="text/javascript">
+      // Self-hosted Storyblok Visual Editor.
+      // Because THIS page is served over http, it is allowed to embed the
+      // http://localhost:3000 preview in an iframe (no mixed-content block,
+      // so no HTTPS / certificate is required).
+      STORYBLOK_PREVIEW_URL = "http://localhost:3000/";
+    </script>
+    <script
+      src="https://app.storyblok.com/f/app-latest.js"
+      type="text/javascript"
+    ></script>
+  </body>
+</html>
