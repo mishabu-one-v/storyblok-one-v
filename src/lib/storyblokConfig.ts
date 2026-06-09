@@ -8,6 +8,8 @@ import About from "@/components/About/About";
 import Features from "@/components/Features/Features";
 import Testimonials from "@/components/Testimonials/Testimonials";
 import Contact from "@/components/Contact/Contact";
+import Cta from "@/components/Cta/Cta";
+import GlobalReference from "@/components/storyblok/GlobalReference";
 
 export const accessToken = process.env.NEXT_PUBLIC_STORYBLOK_TOKEN;
 
@@ -20,4 +22,6 @@ export const storyblokComponents = {
   features: Features,
   testimonials: Testimonials,
   contact: Contact,
+  cta: Cta,
+  global_reference: GlobalReference,
 };

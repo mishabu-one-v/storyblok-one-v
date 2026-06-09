@@ -1,13 +1,13 @@
-"use client";
+'use client';
 
-import { useState } from "react";
-import styles from "./Header.module.css";
+import { useState } from 'react';
+import styles from './Header.module.css';
 
 const navLinks = [
-  { href: "#about", label: "About" },
-  { href: "#features", label: "Features" },
-  { href: "#testimonials", label: "Testimonials" },
-  { href: "#contact", label: "Contact" },
+  { href: '#about', label: 'About' },
+  { href: '#features', label: 'Features' },
+  { href: '#testimonials', label: 'Testimonials' },
+  { href: '#contact', label: 'Contact' },
 ];
 
 export default function Header() {
@@ -16,12 +16,12 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <div className={`container ${styles.inner}`}>
-        <a href="#top" className={styles.logo} onClick={() => setOpen(false)}>
+        <a href="/" className={styles.logo} onClick={() => setOpen(false)}>
           <span className={styles.logoMark} aria-hidden />
           Nebula
         </a>
 
-        <nav className={`${styles.nav} ${open ? styles.navOpen : ""}`}>
+        <nav className={`${styles.nav} ${open ? styles.navOpen : ''}`}>
           {navLinks.map((link) => (
             <a
               key={link.href}
@@ -32,7 +32,11 @@ export default function Header() {
               {link.label}
             </a>
           ))}
-          <a href="#contact" className={styles.cta} onClick={() => setOpen(false)}>
+          <a
+            href="#contact"
+            className={styles.cta}
+            onClick={() => setOpen(false)}
+          >
             Get started
           </a>
         </nav>
@@ -44,7 +48,9 @@ export default function Header() {
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
         >
-          <span className={`${styles.burgerBar} ${open ? styles.burgerBarOpen : ""}`} />
+          <span
+            className={`${styles.burgerBar} ${open ? styles.burgerBarOpen : ''}`}
+          />
         </button>
       </div>
     </header>

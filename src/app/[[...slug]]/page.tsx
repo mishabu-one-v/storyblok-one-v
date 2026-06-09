@@ -16,6 +16,9 @@ async function fetchStory(slug: string): Promise<ISbStoryData | null> {
     const storyblokApi = getStoryblokApi();
     const { data } = await storyblokApi.get(`cdn/stories/${slug}`, {
       version: VERSION,
+      // Expand `global_reference` blocks: replace the stored story UUID with the
+      // full referenced story so GlobalReference can render its content inline.
+      resolve_relations: ["global_reference.reference"],
     });
     return data.story;
   } catch {

@@ -1,17 +1,17 @@
-import styles from "./Footer.module.css";
+import styles from './Footer.module.css';
 
 const columns = [
   {
-    title: "Product",
-    links: ["Features", "Integrations", "Pricing", "Changelog"],
+    title: 'Product',
+    links: ['Features', 'Integrations', 'Pricing', 'Changelog'],
   },
   {
-    title: "Company",
-    links: ["About", "Careers", "Blog", "Contact"],
+    title: 'Company',
+    links: ['About', 'Careers', 'Blog', 'Contact'],
   },
   {
-    title: "Resources",
-    links: ["Docs", "API reference", "Status", "Community"],
+    title: 'Resources',
+    links: ['Docs', 'API reference', 'Status', 'Community'],
   },
 ];
 
@@ -20,7 +20,7 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={`container ${styles.inner}`}>
         <div className={styles.brand}>
-          <a href="#top" className={styles.logo}>
+          <a href="/" className={styles.logo}>
             <span className={styles.logoMark} aria-hidden />
             Nebula
           </a>

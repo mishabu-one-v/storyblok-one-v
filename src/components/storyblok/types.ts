@@ -1,4 +1,4 @@
-import type { SbBlokData } from "@storyblok/react/rsc";
+import type { SbBlokData, ISbStoryData } from "@storyblok/react/rsc";
 
 export interface HeroBlok extends SbBlokData {
   badge?: string;
@@ -64,6 +64,22 @@ export interface ContactBlok extends SbBlokData {
   phone?: string;
   location?: string;
   submit_label?: string;
+}
+
+export interface CtaBlok extends SbBlokData {
+  eyebrow?: string;
+  title?: string;
+  text?: string;
+  primary_label?: string;
+  primary_href?: string;
+  secondary_label?: string;
+  secondary_href?: string;
+}
+
+export interface GlobalReferenceBlok extends SbBlokData {
+  // Before resolution this is a story UUID (string); after the route resolves
+  // "global_reference.reference" it becomes the full referenced story object.
+  reference?: ISbStoryData | string;
 }
 
 export interface PageBlok extends SbBlokData {

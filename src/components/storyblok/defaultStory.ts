@@ -13,6 +13,7 @@ export const DEFAULT_PAGE: PageBlok = {
     { _uid: "default-about", component: "about" },
     { _uid: "default-features", component: "features" },
     { _uid: "default-testimonials", component: "testimonials" },
+    { _uid: "default-cta", component: "cta" },
     { _uid: "default-contact", component: "contact" },
   ],
 };
